@@ -29,5 +29,5 @@ J3XLTE_USA_AIO.pit: Partition Information Table for Samsung smartphone, 24 entri
 #18 TDATA (0xf) "tdata.img"
 ```
 
-### cache,img
+### cache.img
 This is packaged in Android's _Sparse Image format_. A tool for making an ext4 mountable system image from cache.img is available with `apt-get install android-sdk-libsparse-utils` as of September 2020.
