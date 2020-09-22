@@ -5,7 +5,10 @@
 | _Original_: `recovery.img` |  |
 | _Original_: `system.img` | Becomes the system partition. Sparse image format. Contains all the priv-apps and system apps. Older versions of android that don't have a `vendor` partition will put their firmware in a folder in |
 | `boot_extracted_ramdisk` | Extracted Ramdisk from `boot.img` |
-| ` boot_extracted_kernel` | Extracted kernel from `boot.img` |
+| `boot_extracted_kernel` | Extracted kernel from `boot.img` |
+| `recovery_exrtacted` | Extracted contents from `recovery.img` |
+
+The original contents of this folder contain the three images, mentioned in the table above and explained below: The _boot_, _recovery_, and _system_ images.
 
 ### boot.img
 We used imjtool to extract the kernel and the ramdisk as they are contained in the boot image.
@@ -36,7 +39,7 @@ $ imjtool boot.img extract
 ```
 
 ### recovery.img
-Contains its own RAMDISK and kernel. Used by vendors for updates and recovery mode. Most rootkits start here. These can be extracted with imjtool as well (see above).
+Contains its own RAMDISK and kernel. Used by vendors for updates and recovery mode. Most rootkits start here. These can be extracted with imjtool as well (see above). The directory `recovery_extracted` contains unique information about this image.
 
 ### system.img
 Not to be confused with the system image contained in `boot.img`. This image is the full android file system (The image we extract from `boot.img` serves as the root file system and it's init.rc dictates the mounting of images to their select partitions, to include this image). These are often packaged in Android's _Sparse Image format_. A tool for making an ext4 mountable system image from `system.img` is available with `apt-get install android-sdk-libsparse-utils` as of September 2020.
