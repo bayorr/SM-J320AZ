@@ -4,9 +4,8 @@
 | _Original_: `boot.img` | SM-J320AZ stock boot image. Extracted into `boot_extracted_ramdisk` and `boot_extracted_kernel` |
 | _Original_: `recovery.img` |  |
 | _Original_: `system.img` | Becomes the system partition. Sparse image format. Contains all the priv-apps and system apps. Older versions of android that don't have a `vendor` partition will put their firmware in a folder in |
-| `boot_extracted_ramdisk` | Boot ramdisk contents |
-| ` boot_extracted_kernel` | Boot kernel contents |
-| `_system.ext4` | Ext4 mountable partition created from `system.img` |
+| `boot_extracted_ramdisk` | Extracted Ramdisk from `boot.img` |
+| ` boot_extracted_kernel` | Extracted kernel from `boot.img` |
 
 ### boot.img
 We used imjtool to extract the kernel and the ramdisk as they are contained in the boot image.
