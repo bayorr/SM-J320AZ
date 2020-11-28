@@ -1,8 +1,7 @@
 ## Scope
 Find binaries for analysis. Initially look to see if any of these binaries are not stripped.
 
-## Method
-The trivial method for retrieving files was to simply rightclick and select 'mount'. The sub-images included in the *tar.md5 packages are then easily copy/paste out of the directory. Should probably look into the proper way to do this on the command line, though. Maybe I just got lucky. The files in the table below are in their respective directories.
+## Description
 
 | File | Description |
 |------|-------------|
